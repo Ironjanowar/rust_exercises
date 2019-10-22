@@ -56,12 +56,7 @@ fn main() {
     println!("  1. Guess game");
     println!("  2. Find your number");
 
-    let mut selected_option = String::new();
-
-    io::stdin().read_line(&mut selected_option)
-        .expect("Failed to read line");
-
-    let selected_option: u32 = selected_option.trim().parse().expect("Please try a number!");
+    let selected_option = get_integer_input();
 
     match selected_option {
         1 => guess_game(),

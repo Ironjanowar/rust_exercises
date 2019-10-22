@@ -2,7 +2,6 @@ use std::io;
 use rand::Rng;
 
 fn get_integer_input() -> u32 {
-    println!("Input a number between 1-100:");
     let mut input = String::new();
 
     io::stdin().read_line(&mut input)
@@ -16,6 +15,7 @@ fn generate_number() -> u32 {
 }
 
 fn guess_game() {
+    println!("Input a number between 1-100:");
     let number: u32 = get_integer_input();
     let generated_number: u32 = generate_number();
 
@@ -27,6 +27,7 @@ fn guess_game() {
 }
 
 fn find_your_number() {
+    println!("Input a number between 1-100:");
     let number: u32 = get_integer_input();
     let mut generated_number: u32 = generate_number();
     let mut tries: u32 = 0;

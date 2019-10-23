@@ -1,6 +1,6 @@
 use std::io::{BufRead, BufReader};
 
-fn read_single_line_integer() -> (u64, u64) {
+fn read_input() -> (u64, u64) {
     let mut input = BufReader::new(std::io::stdin());
     let mut line = "".to_string();
     input.read_line(&mut line).unwrap();
@@ -17,7 +17,7 @@ fn read_single_line_integer() -> (u64, u64) {
 }
 
 fn main() {
-    let (number, input_sum): (u64, u64) = read_single_line_integer();
+    let (number, input_sum): (u64, u64) = read_input();
     let full_sum: u64 = (1..(number+1)).fold(0, |a, b| a + b);
     println!("{}", full_sum - input_sum);
 }
